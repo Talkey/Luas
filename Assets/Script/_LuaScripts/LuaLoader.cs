@@ -1,4 +1,5 @@
 using System.Collections;
+using System.IO;
 using System.Collections.Generic;
 using UnityEngine;
 using XLua;
@@ -34,6 +35,10 @@ public class LuaLoader : MonoBehaviour
     {
         Debug.Log(filepath);
 
-        return null;
+        string path = Application.dataPath;
+        path = path.Substring(0,path.Length-7)+"/DataPath/Lua/"+filepath+".lua";
+        Debug.Log(path);
+        //读取为字节数组
+        return File.ReadAllBytes(path);
     }
 }

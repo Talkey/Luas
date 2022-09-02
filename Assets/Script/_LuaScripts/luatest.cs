@@ -31,8 +31,10 @@ public class luatest : MonoBehaviour
         env.DoString("print('hello world')");
 
         //luaµ÷ÓÃc#´úÂë
-        Debug.Log("");
-        env.DoString("CS.UnityEngine.Debug.Log('from lua hello worldss')");
+        Debug.Log("");        
+        env.DoString("require(test)");
+        env.DoString("CS.UnityEngine.Debug.Log('from lua hello world')");
+
         env.Dispose();
     }
 

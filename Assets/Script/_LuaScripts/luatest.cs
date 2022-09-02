@@ -33,7 +33,7 @@ public class luatest : MonoBehaviour
         //luaµ÷ÓÃc#´úÂë       
         env.DoString("require('test')");
 
-        //env.DoString("CS.UnityEngine.Debug.Log('from lua hello world')");
+        env.DoString("CS.UnityEngine.Debug.Log('luas/'() use C# hello world')");
 
         env.Dispose();
     }

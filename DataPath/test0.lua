@@ -1,0 +1,1 @@
+print("test0 in"..package.cpath)

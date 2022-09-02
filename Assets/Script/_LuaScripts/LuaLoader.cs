@@ -11,6 +11,8 @@ public class LuaLoader : MonoBehaviour
         LuaFileLoader();
     }
 
+    public string[] filepath;
+
     public void LuaFileLoader()
     {
         LuaEnv env = new LuaEnv();
@@ -21,7 +23,7 @@ public class LuaLoader : MonoBehaviour
         //将自定义的加载器添加到xlua解析环境中
         env.AddLoader(ProjectLoader);
 
-        env.DoString("require('test0')");
+        LuaFileLoad(filepath, env);
 
         env.Dispose();
 
@@ -31,6 +33,7 @@ public class LuaLoader : MonoBehaviour
 
     }
 
+    //自定义路径下的加载lua文件
     public byte[] ProjectLoader(ref string filepath)
     {
         Debug.Log(filepath);
@@ -40,5 +43,13 @@ public class LuaLoader : MonoBehaviour
         Debug.Log(path);
         //读取为字节数组
         return File.ReadAllBytes(path);
+    }
+
+    public void LuaFileLoad(string[] filepath,LuaEnv env)
+    {
+        foreach( string path in filepath)
+        {
+            env.DoString("require('"+path+"')");
+        }
     }
 }

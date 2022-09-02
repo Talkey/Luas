@@ -15,7 +15,7 @@ public class luatest : MonoBehaviour
         LuaEnv env = new LuaEnv();
 
         //解析器运行lua代码
-        env.DoString("print('hello world')");
+        //env.DoString("print('hello world')");
         //释放解析器
 
         env.Dispose();
@@ -28,12 +28,12 @@ public class luatest : MonoBehaviour
     {
         //c#调用lua函数
         LuaEnv env = new LuaEnv();
-        env.DoString("print('hello world')");
+        //env.DoString("print('hello world')");
 
-        //lua调用c#代码
-        Debug.Log("");        
-        env.DoString("require(test)");
-        env.DoString("CS.UnityEngine.Debug.Log('from lua hello world')");
+        //lua调用c#代码       
+        env.DoString("require('test')");
+
+        //env.DoString("CS.UnityEngine.Debug.Log('from lua hello world')");
 
         env.Dispose();
     }

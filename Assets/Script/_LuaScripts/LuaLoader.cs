@@ -42,7 +42,14 @@ public class LuaLoader : MonoBehaviour
         path = path.Substring(0,path.Length-7)+"/DataPath/Lua/"+filepath+".lua";
         Debug.Log(path);
         //读取为字节数组
-        return File.ReadAllBytes(path);
+        if (File.Exists(path))
+        {
+            return File.ReadAllBytes(path);
+        }
+        else
+        {
+            return null;
+        }
     }
 
     public void LuaFileLoad(string[] filepath,LuaEnv env)

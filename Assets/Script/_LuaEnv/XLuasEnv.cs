@@ -4,7 +4,7 @@ using UnityEngine;
 using System.IO;
 using XLua;
 
-public class XLuasEnv : MonoBehaviour
+public class XLuasEnv
 {
 
     private LuaEnv _Env;

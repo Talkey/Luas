@@ -20,7 +20,7 @@ namespace LuaNameSpace
             return "static use";
         }
 
-        public static void Defualt(string str="abc")
+        public static void Defualt(string str="abc") 
         {
             Debug.Log(str);
         }
@@ -32,7 +32,7 @@ public class LuaCallStatic : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        XLuasEnv.Instance.LuaDoString("require('CZL/LuaCallStatic')");
+        XLuasEnv.Instance.LuaDoString("CZL/LuaCallStatic");
     }
 
     // Update is called once per frame

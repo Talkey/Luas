@@ -73,6 +73,22 @@ public class XLuasEnv
 
     public object[] LuaDoString(string code)
     {
-        return _Env.DoString(code);
+        return _Env.DoString("require('"+code+"')");
     }
+
+
+    public  object[] LuaDoString0(string filePath,string luaFileName)
+    {
+        //string luaFileName=this.GetType().ToString();
+        return _Env.DoString("require('" + filePath+"/" + luaFileName + "')");
+    }
+    
+    public object[] LuaDoString1(string filePath)
+    {
+        var type=GetType();
+
+        string luaFileName = type.ToString();
+        return _Env.DoString("require('" + filePath + "/" + luaFileName + "')");
+    }
+    
 }

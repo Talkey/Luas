@@ -4,4 +4,4 @@ local  obj=CS.NPC()
 
 obj.HP=100;
 print(obj.HP)
-CS.obj.PrintMe()
+print(CS.obj.PrintMe())

@@ -31,7 +31,7 @@ public class XLuasEnv
         }
 
     }
-
+    /*
     public void LuaFileLoaderAdd(LuaEnv env)
     {
         //∂‘”¶test.lua
@@ -47,7 +47,7 @@ public class XLuasEnv
 
     }
 
-
+    */
     public byte[] _ProjectLoader(ref string filepath)
     {
         string path = Application.dataPath;
@@ -64,13 +64,6 @@ public class XLuasEnv
         }
     }
 
-    public void LuaFileLoad(string[] filepath, LuaEnv env)
-    {
-        foreach (string path in filepath)
-        {
-            env.DoString("require('" + path + "')");
-        }
-    }
 
     public void FreeEnv()
     {

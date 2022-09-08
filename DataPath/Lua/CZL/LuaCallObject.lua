@@ -13,4 +13,8 @@ print(NPC0.name)
 NPC0:PrintMe()
 print(NPC0:output().."第二次打印")
 
+
+
+
+
 CS.UnityEngine.GameObject("GameObjectLuaCreated")

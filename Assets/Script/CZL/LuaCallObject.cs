@@ -7,8 +7,9 @@ public class LuaCallObject : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        XLuasEnv.Instance.LuaDoString0("CZL",GetType().ToString());
+        XLuasEnv.Instance.LuaDoStrings("CZL/LuaCallObject");
         //XLuasEnv.Instance.LuaDoString1("CZL");
+
         //Debug.Log(this.GetType().ToString());
     }
 

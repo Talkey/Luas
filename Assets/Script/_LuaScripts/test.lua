@@ -1,1 +1,0 @@
-print('helloworld from file lua')

@@ -52,6 +52,11 @@ public class LuaLoader : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// 调用方法使用路径文件和对应的lua环境
+    /// </summary>
+    /// <param name="filepath"></param>
+    /// <param name="env"></param>
     public void LuaFileLoad(string[] filepath,LuaEnv env)
     {
         foreach( string path in filepath)

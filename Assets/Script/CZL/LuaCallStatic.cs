@@ -30,9 +30,14 @@ namespace LuaNameSpace
 public class LuaCallStatic : MonoBehaviour
 {
     // Start is called before the first frame update
+    //Assets/Script/CZL
     void Start()
     {
-        XLuasEnv.Instance.LuaDoString("CZL/LuaCallStatic");
+        
+        //XLuasEnv.Instance.LuaDoStrings("CZL/LuaCallStatic1");
+        //XLuasEnv.Instance.LuaDoStrings("CZL/LuaCallStatic");
+        //XLuasEnv.Instance.LuaDoString("Assets/Script/CZL/LuaCallStatic1");
+        XLuasEnv.Instance.LuaDoString_by_Path_FileName("DataPath/Lua/CZL", "LuaCallStatic12"); 
     }
 
     // Update is called once per frame

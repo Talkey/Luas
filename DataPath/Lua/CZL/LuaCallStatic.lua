@@ -3,15 +3,15 @@
 print("hello")
 print("打印id号："..CS.LuaNameSpace.LuaStaticClass.id)
 
---静态属性赋值
+--静态属性赋值?
 CS.LuaNameSpace.LuaStaticClass.name="admin"
 print("名字:"..CS.LuaNameSpace.LuaStaticClass.name)
 
---静态成员方法
-print("静态成员方法:"..CS.LuaNameSpace.LuaStaticClass.outPut())
+--静态成员方法?
+print("静态成员方法?:"..CS.LuaNameSpace.LuaStaticClass.outPut())
 
---使用默认值
+--使用默认函数?
 CS.LuaNameSpace.LuaStaticClass.Defualt()
---使用自定义值
+--使用自定义函数?
 local strs="iwanna"
-CS.LuaNameSpace.LuaStaticClass.Defualt("自定义值:"..strs)
+CS.LuaNameSpace.LuaStaticClass.Defualt("自定义函数?:"..strs)

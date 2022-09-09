@@ -34,7 +34,7 @@ public class LuaCallStatic : MonoBehaviour
     void Start()
     {
         
-        //XLuasEnv.Instance.LuaDoStrings("CZL/LuaCallStatic1");
+        XLuasEnv.Instance.LuaDoStrings("CZL/LuaCallStatic");
         //XLuasEnv.Instance.LuaDoStrings("CZL/LuaCallStatic");
         //XLuasEnv.Instance.LuaDoString("Assets/Script/CZL/LuaCallStatic1");
         XLuasEnv.Instance.LuaDoString_by_Path_FileName("DataPath/Lua/CZL", "LuaCallStatic12"); 
